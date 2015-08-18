@@ -1,0 +1,112 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link rel="shortcut icon" type="image/png" href="favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=0">
+
+    <%= stylesheet_link_tag "bootstrap", "style.scss", "font-awesome.min" %>
+ 
+    <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <%= javascript_include_tag "jquery-2.1.0.min", "bootstrap", "blocs", "jqBootstrapValidation", "formHandler" %>
+
+    <title>Text Quoter</title>
+</head>
+<body>
+<!-- Main container -->
+<div class="page-container">
+    
+<!-- Hero Bloc -->
+<div id="hero-bloc" class="bloc hero bgc-2 bg-dots-bg l-bloc bg-repeat">
+	<div class="container bloc-sm hero-nav">
+		<nav class="navbar row">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="index.html">Text Quoter</a>
+				<button id="nav-toggle" type="button" class="ui-navbar-toggle navbar-toggle" data-toggle="collapse" data-target=".navbar-1">
+					<span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span>
+				</button>
+			</div>
+			<div class="collapse navbar-collapse navbar-1">
+				<ul class="site-navigation nav pull-right">
+				</ul>
+			</div>
+		</nav>
+	</div>
+	<div class="v-center text-center">
+		<div class="vc-content">
+			<h1 class="">
+				You probably want random quotes
+			</h1>
+			<h3 class="">
+				sent to your phone number.
+			</h3><br /><br /><br /><a id="scroll-hero" class="btn-wire btn btn-xl">So give me your number.</a>
+		</div>
+	</div>
+</div>
+<!-- Hero Bloc END -->
+
+<!-- Bloc Group -->
+<div class='bloc-group'>
+
+<!-- bloc-2 -->
+<div class="bloc l-bloc  bloc-tile-2" id="bloc-2">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<h3 class="mg-md">
+					Really though
+				</h3>
+				<p>
+					It&rsquo;s just gonna be a single text with a random quote from rap songs but just the parts where it makes no sense at all and it&rsquo;s very confusing. <a href ="http://www.complex.com/music/2012/09/40-rap-lyrics-that-make-no-sense/">Based on Complex's article here.</a>
+				</p>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-2 END -->
+
+<!-- bloc-3 -->
+<div class="bloc l-bloc  bloc-tile-2" id="bloc-3">
+	<div class="container bloc-lg">
+		<div class="row">
+			<div class="col-sm-12">
+				<form id="form-1" novalidate>
+					<div class="form-group number">
+						<%= form_tag do |f| %>
+							<%= label_tag(:q, "Phone #") %></br>
+						  	<%= telephone_field :phone, :id => "phone", :placeholder => "773-555-5555" %></br>
+						  	<%= submit_tag("Submit") %>
+						<% end %>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div>
+</div>
+<!-- bloc-3 END -->
+</div>
+<!-- Bloc Group END -->
+
+<!-- Footer - bloc-4 -->
+<div class="bloc l-bloc " id="bloc-4">
+	<div class="container bloc-lg">
+		<div class="row voffset-lg">
+			<div class="col-sm-12">
+				<img class="img-responsive center-block mg-lg" src="assets/thumbs-up.gif" />
+			</div>
+		</div>
+	</div>
+</div>
+<!-- Footer - bloc-4 END -->
+</div>
+<!-- Main container END -->
+
+</body>
+    
+<!-- Google Analytics -->
+
+<!-- Google Analytics END -->
+
+</html>
