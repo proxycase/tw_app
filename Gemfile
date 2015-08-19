@@ -27,7 +27,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'bcrypt', '~> 3.1.7'
 
 # Use Unicorn as the app server
-# gem 'unicorn'
+gem 'unicorn'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -39,7 +39,7 @@ gem 'twilio-ruby'
 gem 'sinatra'
 
 # Use puma as the server
-gem 'puma'
+# gem 'puma'
 
 group :development, :test do
 	# Use sqlite3 as the database for Active Record

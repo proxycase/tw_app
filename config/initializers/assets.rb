@@ -2,9 +2,8 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( jquery-2.1.0.min.js bootstrap.js blocs.js formHandler.js jquery.maskedinput.js)
-Rails.application.config.assets.precompile += %w( bootstrap.css style.scss font-awesome.min.css )
-Rails.application.config.assets.precompile += %w( dots-bg.png )
+Rails.application.config.assets.precompile += %w( jquery-2.1.0.min.js bootstrap.js blocs.js formHandler.js jquery.maskedinput.js bootstrap.css style.scss font-awesome.min.css)
+
 
 # Add additional assets to the asset load path
 # Rails.application.config.assets.paths << Emoji.images_path
