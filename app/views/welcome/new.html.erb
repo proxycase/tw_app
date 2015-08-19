@@ -10,8 +10,11 @@
     <%= stylesheet_link_tag "bootstrap", "style.scss", "font-awesome.min" %>
  
     <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <%= javascript_include_tag "jquery-2.1.0.min.js", "bootstrap.js", "blocs.js", "jquery.maskedinput.min.js" , "formHandler.js" %>
-    <script> 
+    <%= javascript_include_tag "jquery-2.1.0.min.js", "bootstrap.js", "blocs.js", "jquery.maskedinput.js" , "formHandler.js" %>
+    <script>
+    $( document ).ready(function($){
+   		$("#phone").mask("(999) 999-9999");
+   	});
 
    function lengthCheck(){
    	var length = $("#phone").val().replace(/[^a-z0-9]/gi, '').length;
@@ -23,11 +26,6 @@
 	    $("#button").removeAttr('disabled', 'disabled');
 	  }
 	}
-    
-    jQuery(function($){
-   $("#phone").mask("(999) 999-9999");
-   lengthCheck();
-   });
     </script>
 
     <title>Text Quoter</title>
@@ -96,7 +94,7 @@
 							Can I have your number? (USA only)
 						</label>
 						  <input type="text" class="form-control" id="phone" placeholder="(773) 202-LUNA" name="number" onKeyUp="lengthCheck()"></br>
-						  <button type="submit" id="button" class="bloc-button btn btn-d btn-lg btn-block">Submit</button>
+						  <button type="submit" id="button" class="bloc-button btn btn-d btn-lg btn-block" disabled>Submit</button>
 					</div> 
 				<% end %>
 			</div>
