@@ -1,10 +1,8 @@
 class CreateQuotes < ActiveRecord::Migration
   def change
     create_table :quotes do |t|
-      t.string :name
-      t.string :quote
-
-      t.timestamps null: false
+      t.text :name
+      t.text :quote
     end
   end
 end

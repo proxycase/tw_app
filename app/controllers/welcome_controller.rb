@@ -2,20 +2,22 @@ class WelcomeController < ApplicationController
   def new
   end
 
-  def text
-  	# Get twilio-ruby from twilio.com/docs/ruby/install
-	require 'twilio-ruby'
+  def send_sms
+  	# write something here that randomly retrieves a location in the db
 
-	account_sid = 'AC9aa7eeaace3b2b066ae8d573d5e2b207'
-	auth_token = '40c59133eac1994b915857be63dd8bc1'
+  	message = params[:message]
+  	number = params[:number]
+  	account_sid = 'AC318d3acffe6308188456f38cad425aee'
+  	auth_token = '1b8cd69f8c7b2fcc4dc9c80d169c3886'
 
-    @client = Twilio::REST::Client.new account_sid, auth_token
-    message = @client.account.sms.messages.create(
-      :from => @twilio_number,
-      :to => "+7736093546",
-      :body => "Test Text 1 2 3",
-    )
+  	@client = Twilio::REST::Client.new account_sid, auth_token
+  	@message = @client.account.messages.create({
+  		:to => "+#{number}",
+  		:from => "+17089428606",
+  		:body => "Testing 1 2 3"
+  	})
 
-	puts sms.body
+  	redirect_to '/'
   end
+
 end

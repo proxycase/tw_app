@@ -72,15 +72,15 @@
 	<div class="container bloc-lg">
 		<div class="row">
 			<div class="col-sm-12">
-				<form id="form-1" novalidate>
-					<div class="form-group number">
-						<%= form_tag do |f| %>
-							<%= label_tag(:q, "Phone #") %></br>
-						  	<%= telephone_field :phone, :id => "phone", :placeholder => "773-555-5555" %></br>
-						  	<%= submit_tag("Submit") %>
-						<% end %>
-					</div>
-				</form>
+				<%= form_tag('/send_sms', method: "post", id: "form-1") do %>
+					<div class="form-group">
+						<label>
+							Can I have your number?
+						</label>
+						  <input type="text" class="form-control" id="number" placeholder="773-555-5555" name="number"></br>
+						  <button type="submit" class="bloc-button btn btn-d btn-lg btn-block">Submit</button>
+					</div> 
+				<% end %>
 			</div>
 		</div>
 	</div>
@@ -94,7 +94,7 @@
 	<div class="container bloc-lg">
 		<div class="row voffset-lg">
 			<div class="col-sm-12">
-				<img class="img-responsive center-block mg-lg" src="assets/thumbs-up.gif" />
+				<img class="img-responsive center-block mg-lg" src="http://i.imgur.com/BkX6D7w.gif" title="source: imgur.com" />
 			</div>
 		</div>
 	</div>

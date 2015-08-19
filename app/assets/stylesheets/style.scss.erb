@@ -143,9 +143,10 @@ a {
 }
 
 /* Bloc image backgrounds */
+//= depend_on_asset "dots-bg.png"
 
 .bg-dots-bg{
-	background-image: image-url("dots-bg.png");
+	background-image:url('<%= asset_path("dots-bg.png") %> ');
 }
 
 /* = NavBar
