@@ -2,7 +2,7 @@
 
 # Version of your assets, change this if you want to expire all your assets.
 Rails.application.config.assets.version = '1.0'
-Rails.application.config.assets.precompile += %w( jquery-2.1.0.min.js bootstrap.js blocs.js jqBootstrapValidation.js formHandler.js)
+Rails.application.config.assets.precompile += %w( jquery-2.1.0.min.js bootstrap.js blocs.js jqBootstrapValidation.js formHandler.js jquery.maskedinput.min.js)
 Rails.application.config.assets.precompile += %w( bootstrap.css style.scss font-awesome.min.css dots-bg.png thumbs-up.gif)
 
 # Add additional assets to the asset load path

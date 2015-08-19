@@ -1,6 +1,5 @@
 source 'https://rubygems.org'
 
-
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.2.3'
 # Use SCSS for stylesheets
@@ -20,6 +19,8 @@ gem 'turbolinks'
 gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
+# For validating phone numbers
+gem 'phony_rails' # Include phony_rails after mongoid (if you use mongoid, see issue #66 on github).
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -52,5 +53,3 @@ group :production do
   gem 'pg'
   gem 'rails_12factor'
 end
-
-gem 'global_phone'

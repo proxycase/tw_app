@@ -48,13 +48,17 @@ GEM
       coffee-script-source
       execjs
     coffee-script-source (1.9.1.1)
+    countries (0.11.5)
+      currencies (~> 0.4.2)
+      i18n_data (~> 0.7.0)
+    currencies (0.4.2)
     debug_inspector (0.0.2)
     erubis (2.7.0)
     execjs (2.6.0)
-    global_phone (1.0.1)
     globalid (0.3.6)
       activesupport (>= 4.1.0)
     i18n (0.7.0)
+    i18n_data (0.7.0)
     jbuilder (2.3.1)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)
@@ -75,6 +79,11 @@ GEM
     nokogiri (1.6.6.2)
       mini_portile (~> 0.6.0)
     pg (0.18.2)
+    phony (2.14.14)
+    phony_rails (0.12.9)
+      activesupport (>= 3.0)
+      countries (~> 0.11, >= 0.11.5)
+      phony (~> 2.12)
     rack (1.6.4)
     rack-protection (1.5.3)
       rack
@@ -159,10 +168,10 @@ PLATFORMS
 DEPENDENCIES
   byebug
   coffee-rails (~> 4.1.0)
-  global_phone
   jbuilder (~> 2.0)
   jquery-rails
   pg
+  phony_rails
   rails (= 4.2.3)
   rails_12factor
   sass-rails (~> 5.0)

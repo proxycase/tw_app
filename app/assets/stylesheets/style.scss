@@ -17,6 +17,9 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
  h1, h2, h3, h4, h5, h6, p, label, .btn, a{
 	font-family:PT Sans;
 }
+a {
+	color:#5050FF;
+}
 
 
 /* Site container width */
@@ -140,9 +143,10 @@ button{outline: none!important;} /* Prevent ugly blue glow on chrome and safari 
 }
 
 /* Bloc image backgrounds */
+//= depend_on_asset "dots-bg.png"
 
 .bg-dots-bg{
-	background-image: image-url("dots-bg.png");
+	background-image:image-url("dots-bg.png");
 }
 
 /* = NavBar

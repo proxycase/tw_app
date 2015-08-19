@@ -10,7 +10,7 @@
     <%= stylesheet_link_tag "bootstrap", "style.scss", "font-awesome.min" %>
  
     <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
-    <%= javascript_include_tag "jquery-2.1.0.min", "bootstrap", "blocs", "jqBootstrapValidation", "formHandler" %>
+    <%= javascript_include_tag "jquery-2.1.0.min", "bootstrap", "blocs", "jquery.maskedinput.min" , "formHandler" %>
 
     <title>Text Quoter</title>
 </head>
@@ -75,9 +75,9 @@
 				<%= form_tag('/send_sms', method: "post", id: "form-1") do %>
 					<div class="form-group">
 						<label>
-							Can I have your number?
+							Can I have your number? (USA only)
 						</label>
-						  <input type="text" class="form-control" id="number" placeholder="773-555-5555" name="number"></br>
+						  <input type="text" class="form-control" id="phone" placeholder="773-555-5555" name="number"></br>
 						  <button type="submit" class="bloc-button btn btn-d btn-lg btn-block">Submit</button>
 					</div> 
 				<% end %>
