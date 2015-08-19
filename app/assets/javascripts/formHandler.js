@@ -1,4 +1,18 @@
+$(function(){
+  $("#phone").val("");
+  $("#phone").mask("(999) 999-9999");
+});
 
+function lengthCheck(){
+  var length = $("#phone").val().replace(/[^a-z0-9]/gi, '').length;
+  if (length < 10) {
+    $("#button").addClass('button-disabled');
+    $("#button").attr('disabled', 'disabled');
+  } else {
+    $("#button").removeClass('button-disabled');
+    $("#button").removeAttr('disabled', 'disabled');
+  }
+}
 
 
 // // keypress

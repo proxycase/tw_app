@@ -11,22 +11,6 @@
  
     <link href='http://fonts.googleapis.com/css?family=PT+Sans&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <%= javascript_include_tag "jquery-2.1.0.min.js", "bootstrap.js", "blocs.js", "jquery.maskedinput.js" , "formHandler.js" %>
-    <script>
-    $( document ).ready(function($){
-   		$("#phone").mask("(999) 999-9999");
-   	});
-
-   function lengthCheck(){
-   	var length = $("#phone").val().replace(/[^a-z0-9]/gi, '').length;
-	  if (length < 10) {
-	    $("#button").addClass('button-disabled');
-	    $("#button").attr('disabled', 'disabled');
-	  } else {
-	    $("#button").removeClass('button-disabled');
-	    $("#button").removeAttr('disabled', 'disabled');
-	  }
-	}
-    </script>
 
     <title>Text Quoter</title>
 </head>
