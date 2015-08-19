@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0', group: :doc
 # For validating phone numbers
-gem 'phony_rails' # Include phony_rails after mongoid (if you use mongoid, see issue #66 on github).
+# gem 'phony_rails' # Include phony_rails after mongoid (if you use mongoid, see issue #66 on github).
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'
@@ -36,6 +36,9 @@ gem 'twilio-ruby'
 
 # Use Sinatra for development
 gem 'sinatra'
+
+# Use puma as the server
+gem 'puma'
 
 group :development, :test do
 	# Use sqlite3 as the database for Active Record
