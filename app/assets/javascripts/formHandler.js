@@ -1,6 +1,8 @@
 $(function(){
   $("#phone").val("");
   $("#phone").mask("(999) 999-9999");
+  $("#button").addClass('button-disabled');
+  $("#button").attr('disabled', 'disabled');
 });
 
 function lengthCheck(){
